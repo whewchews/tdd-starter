@@ -8,5 +8,11 @@ export const SaasList = ({
     lastPaidAt: Date | null;
   }[];
 }) => {
-  return <ul aria-label="SaaS 목록">empty</ul>;
+  return (
+    <ul aria-label="SaaS 목록">
+      {saasList.map((saas) => (
+        <li key={saas.id}>{JSON.stringify(saasList)}</li>
+      ))}
+    </ul>
+  );
 };

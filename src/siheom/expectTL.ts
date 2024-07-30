@@ -140,9 +140,9 @@ export function expectTL(tLocator: TLocator): {
     },
     async toHaveCount(count) {
       const fakeError = new Error();
-      return waitFor(() => {
+      return waitFor(async () => {
         try {
-          expect(tLocator.findAll()).toHaveLength(count);
+          expect(await tLocator.findAll()).toHaveLength(count);
         } catch (error) {
           return swapStackAsync(fakeError, error);
         }
@@ -274,9 +274,9 @@ export function expectTL(tLocator: TLocator): {
       },
       async toHaveCount(count) {
         const fakeError = new Error();
-        return waitFor(() => {
+        return waitFor(async () => {
           try {
-            expect(tLocator.findAll()).not.toHaveLength(count);
+            expect(await tLocator.findAll()).not.toHaveLength(count);
           } catch (error) {
             return swapStackAsync(fakeError, error);
           }
