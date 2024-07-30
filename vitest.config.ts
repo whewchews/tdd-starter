@@ -13,6 +13,12 @@ export default defineConfig({
     poolOptions: {
       useAtomics: true,
     },
+    browser: {
+      enabled: true,
+      name: "chromium",
+      headless: true,
+      provider: "playwright",
+    },
     testTimeout: 3000,
     onConsoleLog(log, type) {
       if (log.includes("inside a test was not wrapped in act")) return false;
@@ -23,12 +29,6 @@ export default defineConfig({
       )
         return false;
       if (log.includes("should be wrapped into act")) return false;
-    },
-    browser: {
-      enabled: true,
-      name: "chromium",
-      headless: true,
-      provider: "playwright",
     },
     // coverage: {
     // 	provider: 'istanbul',
