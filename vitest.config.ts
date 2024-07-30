@@ -1,9 +1,10 @@
 import { defineConfig } from "vitest/config";
+import tsconfigPaths from "vite-tsconfig-paths";
 import react from "@vitejs/plugin-react";
 /// <reference types="vitest" />
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [tsconfigPaths(), react()],
   root: "./",
   test: {
     setupFiles: "./setupTests.ts",
