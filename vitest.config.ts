@@ -7,7 +7,7 @@ export default defineConfig({
   root: "./",
   test: {
     setupFiles: "./setupTests.ts",
-    include: ["app/**/*.test.tsx", "app/**/*.test.ts"],
+    include: ["src/**/*.test.tsx", "src/**/*.test.ts"],
     css: true,
     pool: "vmThreads",
     poolOptions: {
