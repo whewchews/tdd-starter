@@ -24,6 +24,12 @@ export default defineConfig({
         return false;
       if (log.includes("should be wrapped into act")) return false;
     },
+    browser: {
+      enabled: true,
+      name: "chromium",
+      headless: true,
+      provider: "playwright",
+    },
     // coverage: {
     // 	provider: 'istanbul',
     // 	include: [
