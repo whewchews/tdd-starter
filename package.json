@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-     "cosmos": "cosmos --expose-imports",
-    "cosmos-export": "cosmos-export --expose-imports"
+    "cosmos": "cosmos --expose-imports",
+    "cosmos-export": "cosmos-export --expose-imports",
+    "test": "vitest"
   },
   "dependencies": {
     "next": "14.2.4",
